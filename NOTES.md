@@ -7,6 +7,7 @@ $ yarn init
 $ touch .gitignore
 $ mkdir src
 $ touch src/index.js
+$ touch src/styles.css
 $ mkdir dist
 $ touch dist/index.html
 ```
@@ -31,6 +32,13 @@ $ yarn add html-webpack-plugin clean-webpack-plugin -D
 ```bash
 $ yarn add @babel/core @babel/preset-env babel-loader -D
 $ touch .babelrc
+```
+
+### ESlint
+
+```bash
+$ yarn add eslint eslint-loader eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint-config-airbnb -D
+$ touch .eslintrc.json
 ```
 
 ### React
