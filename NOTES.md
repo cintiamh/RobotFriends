@@ -30,7 +30,7 @@ $ yarn add html-webpack-plugin clean-webpack-plugin -D
 ### Babel
 
 ```bash
-$ yarn add @babel/core @babel/preset-env babel-loader -D
+$ yarn add @babel/core @babel/preset-env babel-loader file-loader -D
 $ touch .babelrc
 ```
 
@@ -46,4 +46,10 @@ $ touch .eslintrc.json
 ```bash
 $ yarn add react react-dom react-hot-loader
 $ yarn add @babel/preset-react css-loader style-loader -D
+```
+
+### Redux
+
+```bash
+$ yarn add redux react-redux redux-logger redux-thunk tachyons
 ```

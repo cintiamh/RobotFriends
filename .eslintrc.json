@@ -1,3 +1,28 @@
 {
-    "extends": "airbnb"
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "react/no-array-index-key": "off",
+        "no-param-reassign": "off",
+        "react/prop-types": "off",
+        "arrow-body-style": "off"
+    }
 }

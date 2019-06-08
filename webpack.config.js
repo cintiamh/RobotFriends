@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: {
-        app: './src/index.js'
+        app: './src/index.jsx'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -12,21 +12,33 @@ const config = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.(js|jsx)$/,
-            //     use: 'babel-loader',
-            //     exclude: /node_modules/
-            // },
             {
                 test: /\.(js|jsx)$/,
-                use: ['babel-loader', 'eslint-loader'],
+                use: ['babel-loader'],
                 exclude: /node_modules/
             },
+            // {
+            //     test: /\.(js|jsx)$/,
+            //     use: ['babel-loader', 'eslint-loader'],
+            //     exclude: /node_modules/
+            // },
             {
                 test: /\.css$/,
                 use: [
                     'style-loader',
                     'css-loader'
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: [
+                    'file-loader'
                 ]
             }
         ]
