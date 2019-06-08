@@ -8,11 +8,33 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].[hash].js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ]
+    },
+    resolve: {
+        extensions: [
+            '.js', '.jsx'
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Robot Friends'
+            title: 'Robot Friends',
+            template: './src/index.html'
         })
     ]
 }

@@ -23,5 +23,19 @@ $ touch webpack.prod.config.js
 Plugins
 
 ```bash
-$ yarn add html-webpack-plugin -D
+$ yarn add html-webpack-plugin clean-webpack-plugin -D
+```
+
+### Babel
+
+```bash
+$ yarn add @babel/core @babel/preset-env babel-loader -D
+$ touch .babelrc
+```
+
+### React
+
+```bash
+$ yarn add react react-dom react-hot-loader
+$ yarn add @babel/preset-react css-loader style-loader -D
 ```
